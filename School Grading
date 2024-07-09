@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class SchoolReportGenerator  {
+private static String calculateGrade( int percentage) {
+int p=percentage/10;
+switch(p)
+{
+ case 10:
+ return "A";
+ case 9:
+ return "B";
+ case 7:
+ return "C";
+ case 6:
+ return "D";
+ default:
+ return"F"
+}
+}
+public static void main(String [] args) 
+{
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Enter the percentage score: ");
+ int percentage = scanner.nextInt();
+ String grade = calculateGrade(percentage);
+ System.out.println("Grade: "+ grade);
+}
+}
